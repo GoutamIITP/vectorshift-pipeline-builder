@@ -1,0 +1,215 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8f9fa;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* Custom node styles */
+.react-flow__node {
+  font-family: inherit;
+}
+
+.react-flow__node.selected {
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25) !important;
+}
+
+.react-flow__node:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2) !important;
+}
+
+/* Handle styles */
+.react-flow__handle {
+  width: 12px;
+  height: 12px;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.react-flow__handle:hover {
+  width: 14px;
+  height: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.react-flow__handle-left {
+  left: -6px;
+}
+
+.react-flow__handle-right {
+  right: -6px;
+}
+
+/* Edge styles */
+.react-flow__edge {
+  stroke-width: 2;
+  transition: stroke 0.2s ease;
+}
+
+.react-flow__edge.selected {
+  stroke: #007bff;
+  stroke-width: 3;
+}
+
+.react-flow__edge:hover {
+  stroke: #0056b3;
+  stroke-width: 3;
+}
+
+/* Toolbar styles */
+.pipeline-toolbar {
+  background: white;
+  border-bottom: 1px solid #dee2e6;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Canvas area */
+.pipeline-canvas {
+  background: #f8f9fa;
+}
+
+/* Draggable node hover effects */
+.draggable-node {
+  user-select: none;
+  position: relative;
+}
+
+.draggable-node:active {
+  transform: scale(0.95) !important;
+}
+
+.draggable-node::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 12px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  pointer-events: none;
+}
+
+.draggable-node:hover::after {
+  opacity: 0.1;
+  background: white;
+}
+
+/* Node container styles */
+.node-container {
+  user-select: none;
+}
+
+.node-container input:focus,
+.node-container select:focus,
+.node-container textarea:focus {
+  border-color: #007bff !important;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25) !important;
+}
+
+/* Custom scrollbar for textarea */
+.node-container textarea::-webkit-scrollbar {
+  width: 6px;
+}
+
+.node-container textarea::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.node-container textarea::-webkit-scrollbar-thumb {
+  background: #c1c1c1;
+  border-radius: 3px;
+}
+
+.node-container textarea::-webkit-scrollbar-thumb:hover {
+  background: #a8a8a8;
+}
+
+/* React Flow Controls styling */
+.react-flow__controls {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.react-flow__controls-button {
+  background: white;
+  border-bottom: 1px solid #dee2e6;
+  transition: all 0.2s ease;
+}
+
+.react-flow__controls-button:hover {
+  background: #f8f9fa;
+}
+
+.react-flow__controls-button svg {
+  fill: #495057;
+}
+
+/* MiniMap styling */
+.react-flow__minimap {
+  background: white;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Background pattern */
+.react-flow__background {
+  background-color: #f8f9fa;
+}
+
+/* Selection box */
+.react-flow__selection {
+  background: rgba(0, 123, 255, 0.08);
+  border: 1px solid #007bff;
+}
+
+/* Smooth animations */
+* {
+  box-sizing: border-box;
+}
+
+/* Loading state */
+.react-flow__renderer {
+  transition: opacity 0.3s ease;
+}
+
+/* Accessibility improvements */
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .pipeline-toolbar {
+    padding: 16px;
+  }
+
+  .draggable-node {
+    min-width: 80px;
+    height: 60px;
+    font-size: 12px;
+  }
+}
+
+/* Print styles */
+@media print {
+  .pipeline-toolbar,
+  .react-flow__controls,
+  .react-flow__minimap {
+    display: none;
+  }
+}
