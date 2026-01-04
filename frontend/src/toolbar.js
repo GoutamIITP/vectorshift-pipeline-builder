@@ -68,6 +68,7 @@ export const PipelineToolbar = () => {
         <DraggableNode type="delay" label="Delay" />
         <DraggableNode type="transform" label="Transform" />
         <DraggableNode type="api" label="API Call" />
+     
       </div>
     </div>
   );

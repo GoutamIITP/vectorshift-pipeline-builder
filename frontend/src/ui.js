@@ -1,4 +1,4 @@
-// ui.js
+// ui.jscolorM
 // Displays the drag-and-drop UI
 // --------------------------------------------------
 
@@ -15,6 +15,7 @@ import { FilterNode } from "./nodes/filterNode";
 import { DelayNode } from "./nodes/delayNode";
 import { TransformNode } from "./nodes/transformNode";
 import { ApiNode } from "./nodes/apiNode";
+ 
 
 import "reactflow/dist/style.css";
 
@@ -30,6 +31,7 @@ const nodeTypes = {
   delay: DelayNode,
   transform: TransformNode,
   api: ApiNode,
+ 
 };
 
 const selector = (state) => ({
@@ -163,6 +165,7 @@ export const PipelineUI = () => {
                 delay: "#ffc107",
                 transform: "#007bff",
                 api: "#6c757d",
+                 
               };
               return colorMap[node.type] || "#495057";
             }}

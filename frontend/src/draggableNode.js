@@ -22,6 +22,7 @@ export const DraggableNode = ({ type, label }) => {
       delay: "⏱️",
       transform: "🔄",
       api: "🌐",
+ 
     };
     return iconMap[type] || "⚙️";
   };
@@ -37,6 +38,7 @@ export const DraggableNode = ({ type, label }) => {
       delay: "#ffc107",
       transform: "#007bff",
       api: "#6c757d",
+ 
     };
     return colorMap[type] || "#495057";
   };
